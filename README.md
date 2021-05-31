@@ -14,7 +14,7 @@
 
 # android setup:
 
-1. create local.properties file in android folder which contains a reference to your android sdk e.g. 'sdk.dir = /Users/[User]/Library/Android/sdk'
+1. create local.properties file in android folder which contains a reference to your android sdk e.g. 'sdk.dir = /Users/[User]/Library/Android/sdk
 
 # run android
 
