@@ -1,5 +1,7 @@
 # nandos-resturants
 
+I have made an effort to structure the app in a way thats appropriate for a production app. I have made sure state is handled in a central location, as the project got larger the first thing to add would be redux.
+
 # setup
 
 1. npm i
