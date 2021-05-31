@@ -1,12 +1,6 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
@@ -21,16 +15,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.lighter,
   },
+  backgroundStyle: {
+    flex: 1,
+    backgroundColor: Colors.white,
+  },
 });
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    flex: 1,
-    backgroundColor: isDarkMode ? Colors.darker : Colors.white,
-  };
-
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
@@ -59,7 +50,7 @@ const App = () => {
   }, []);
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={styles.backgroundStyle}>
       <StatusBar barStyle={'dark-content'} />
       <View style={styles.mainContainer}>
         <Header />
