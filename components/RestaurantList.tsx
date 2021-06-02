@@ -7,7 +7,9 @@ interface renderRestaurantItemProps {
   item: Restaurant;
 }
 
-const renderResturantItem = ({item: restaurant}: renderRestaurantItemProps) => (
+const renderRestaurantItem = ({
+  item: restaurant,
+}: renderRestaurantItemProps) => (
   <RestaurantCard
     title={restaurant.name}
     address={restaurant.geo.address}
@@ -22,7 +24,7 @@ interface RestaurantsProps {
 const RestaurantList = ({restaurants}: RestaurantsProps) => (
   <FlatList
     data={restaurants}
-    renderItem={renderResturantItem}
+    renderItem={renderRestaurantItem}
     keyExtractor={item => item.name}
   />
 );
